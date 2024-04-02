@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <script src="//unpkg.com/alpinejs" defer=""></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<body>
+    <div class="w-full mx-auto">
+    <div class="bg-[linear-gradient(315deg, #000000 0%, #414141 74%)]   bg-gradient-to-r from-[#604c65] from-20% via-[#f1ab6d] via-50% to-[#f1ab6d] to-30%">
+        <div class="px-6 md:px-12 xl:px-32  py-4 md:py-8 lg:py-14   h-full bg-[url('Assets/heroimage.png')] bg-contain bg-right-top bg-no-repeat">
+            <div class="flex flex-row justify-between items-center   ">
+                <p class=" flex flex-row items-center gap-2 text-[#FFF] text-2xl color-black font-bold font-inter"> <img src="Assets/logo.png" alt="" class="h-8 w-auto align-middle">Payments</p>
+                <div class="hidden lg:block items-center">
+                    <div class="flex flex-row justify-between items-center gap-6 xl:gap-7 px-2">
+                        <a href="#" class="text-[#FFF] text-base lg:text-lg font-medium font-inter border-b-2 border-[#604c65] py-2">Home</a>
+                        <a href="#" class="text-[#FFF] text-base leading-8 lg:text-lg font-medium font-inter">Product</a>
+                        <a href="#" class="text-[#FFF] text-base leading-8 lg:text-lg font-medium font-inter">Solutions</a>
+                        <a href="#" class="text-[#FFF] text-base leading-8 lg:text-lg font-medium font-inter">Company</a>
+                    </div>
+                </div>
+                <div class="hidden md:block gap-1 xl:gap-3">
+                    <div class="flex gap-4">
+                        <button class="rounded-[20px] bg-[#344293] px-8 py-[6px] lg:py-2">
+                            <a href="#" class="text-[#FFF] text-xs lg:text-sm font-bold font-dm_sans text-nowrap">Sign up</a>
+                        </button>
+                        <button class="rounded-[20px] bg-[#FFF] px-8 py-[6px] lg:py-2">
+                            <a href="#" class="text-[#122344] text-xs lg:text-sm font-semibold font-dm_sans text-nowrap">Sign in</a>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- menuBar -->
+                <div class=" text-white relative z-10  lg:hidden">
+                    <div class="h-20 py-4 flex items-center">
+                       <!-- Menu -->
+                       <div x-data="{ open: false }" class="z-10 flex-1">
+                          <div :class="{ 'flex' : open, 'hidden' : open === false }" class="fixed lg:relative top-0 left-0 w-full lg:w-auto h-screen lg:h-auto lg:flex flex-col lg:flex-row items-center justify-center lg:justify-start z-50 bg-gradient-to-r from-[#846465] via-[#c18c6c]  to-[#f1ab6d]   lg:bg-transparent leading-loose font-sans uppercase text-white text-base lg:text-xs tracking-wider gap-8 hidden overflow-hidden">
+                            <a href="#" class="text-[#FFF] hover:text-[#122344] text-base lg:text-lg font-bold font-inter">Home</a>
+                            <a href="#" class="text-[#FFF] hover:text-[#122344] text-base lg:text-lg font-bold font-inter">Product</a>
+                            <a href="#" class="text-[#FFF] hover:text-[#122344] text-base lg:text-lg font-bold font-inter">Solutions</a>
+                            <a href="#" class="text-[#FFF] hover:text-[#122344] text-base lg:text-lg font-bold font-inter">Company</a>
+                          </div>
+                          <button @click="open = true" type="button" :class="{ 'hidden' : open, 'block' : !open }" class="block lg:hidden text-4xl font-thin"><img src="Assets/hamburgermenu.png" alt="" class="h-8 w-auto"></button>
+                          <button @click="open = false" type="button" :class="{ 'block' : open, 'hidden' : !open }" class="lg:hidden absolute top-0 right-0 leading-none py-7 text-2xl z-50 hidden pr-1">╳</button>
+                       </div>
+                       <!-- / Menu -->
+                    </div>
+                 </div>
+        
+
+            </div>
+            <div class="bg-[url('Assets/heroimage.png')]  absolute bg-cover">
+            </div>
+            
+            <div class="flex flex-row justify-between items-center ">
+                    <div class="my-0 py-12 md:py-20 xl:py-32">
+                        <h1 class="text-[#FFF] text-2xl sm:text-4xl md:text-5xl font-bold font-dm_sans md:leading-[107%]">The Ultimate Payment & <br> Settlement Platform for <br> Consumers, Merchants, <br> Corporates and
+                            Governments
+                        </h1>
+                        <p class="text-[#FFF] text-base md:text-xl lg:text-2xl font-normal font-inter md:leading-[145%] mt-3 sm:mt-6">Focus less on chasing payments and <br> spend more time growing your Business <br> and planning for the
+                            future.</p>
+                            <div class=" md:hidden gap-1 xl:gap-3 py-5">
+                                <div class="flex gap-4">
+                                    <button class="rounded-[20px] bg-[#344293] px-8 py-2">
+                                        <a href="#" class="text-[#FFF] text-sm font-bold font-dm_sans text-nowrap">Sign up</a>
+                                    </button>
+                                    <button class="rounded-[20px] bg-[#FFF] px-8 py-2">
+                                        <a href="#" class="text-[#122344] text-sm font-semibold font-dm_sans text-nowrap">Sign in</a>
+                                    </button>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="mx-6 md:mx-12 xl:mx-32 -mt-12 sm:-mt-16 lg:-mt-20 shadow-md  z-0  bg-white relative">
+        <div class="pl-10 pr-10 md:pr-20 py-5 flex flex-row">
+            <svg class="bg-[#344293] h-2"><rect/> </svg>
+            <svg class="bg-[#CE2055] h-2"><rect/> </svg>
+            <svg class="bg-[#F8B114] h-2"><rect/> </svg>
+        </div>
+        <div class=" pl-4 sm:pl-10 pr-4 sm:pr-10 md:pr-20 lg:pr-[10%] xl:pr-[18%] 2xl:pr-[30%] pb-10 bg-white flex flex-row justify-between items-center shadow-sm">
+            <p class="text-[#344293] text-base sm:text-xl md:text-2xl font-medium font-dm_sans">REVENUE <br> COLLECTION</p>
+            <p class="text-[#344293] text-base sm:text-xl md:text-2xl font-medium font-dm_sans">PAYMENT <br> AGGREGATION</p>
+            <p class="text-[#344293] text-base sm:text-xl md:text-2xl font-medium font-dm_sans">BUSINESS <br> INTELLIGENCE</p>
+        </div>
+    </div>
+    <div class="mx-6 md:mx-12 xl:mx-32">
+        <p class="text-[#000] text-2xl md:text-3xl lg:text-4xl font-bold font-dm_sans text-left py-8 md:py-12">The future of settlements is <br> digitally driven, efficient, secure <br> and transparent. </p>
+        <p class="text-[#FBB040] text-2xl md:text-3xl lg:text-4xl font-bold font-dm_sans text-left">Harness this power today!</p>
+    </div>
+    <div class="mx-6 md:mx-12 xl:mx-32 md:flex md:flex-row md:gap-6 pt-5 pb-12 md:pb-20">
+        <div class=" pt-2 md:pt-0 w-full">
+             <svg class="bg-[#344293] h-1 w-20 mx-0  mb-3"><rect/> </svg> 
+            <p class="text-[#979797] text-sm md:text-base font-normal font-dm_sans text-left">Payments is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment</p>
+        </div>
+        <div class=" pt-6 md:pt-0 w-full">
+            <svg class="bg-[#344293] h-1 w-20 mx-0 mb-3"><rect/> </svg>
+            <p class="text-[#979797] text-sm md:text-base font-normal font-dm_sans text-left">By enhancing collection of revenue and reducing leakages, Payments saves expenditure and ensures convenience</p>
+        </div>
+        <div class=" pt-6 md:pt-0 w-full">
+            <svg class="bg-[#344293] h-1 w-20 mx-0 mb-3"><rect/> </svg>
+            <p class="text-[#979797] text-sm md:text-base font-normal font-dm_sans text-left">Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts</p>
+        </div>
+    </div>
+    <div class="mx-6 md:mx-12 xl:mx-32 bg-[url('Assets/BlueArt.jpg')]   lg:bg-none pt-5">
+        <img src="Assets/BlueArt.jpg" alt="" class="w-full h-full lg:h-80 hidden lg:block ">
+        <p class="text-white text-2xl md:text-3xl lg:text-4xl font-bold font-dm_sans text-center lg:text-left absolute lg:-mt-72 pl-6 lg:pl-28 ">Solutions </p>
+
+        <div class="px-8  lg:px-28 lg:flex lg:flex-row gap-5 lg:-mt-56 lg:pb-24 py-12 lg:py-0 space-y-10 lg:space-y-0 ">
+            <div class="bg-[#fff] py-11 md:py-14 px-6 lg:px-12 shadow-lg w-full">
+                <svg class="bg-[#F89521] h-1 w-16"><rect/> </svg>
+                <p class=" md:h-24  text-[#000] text-2xl md:text-3xl xl:text-4xl font-bold font-dm_sans  py-5">Governments & Public Sector</p>
+                <p class="text-[#000] text-base md:text-lg font-normal font-dm_sans pb-7 md:pb-14">By enhancing collection of revenue and reducing leakages, Payments saves expenditure and ensures convenience</p>
+                <button class="rounded-[40px] border border-[#122344] px-6 py-2 md:py-3 shadow-sm">
+                    <p class="text-[#122344] text-xs md:text-sm font-normal font-inter text-center">Learn more</p>
+                </button>
+            </div>
+            <div class="bg-[#fff] py-11 md:py-14 px-6 lg:px-12 shadow-lg w-full">
+                <svg class="bg-[#F89521] h-1 w-16"><rect/> </svg>
+                <p class="md:h-24  text-[#000] text-2xl md:text-3xl xl:text-4xl font-bold font-dm_sans  py-5">Merchants</p>
+                <p class="text-[#000] text-base md:text-lg font-normal font-dm_sans pb-7 md:pb-14 ">By enhancing collection of revenue and reducing leakages, Payments saves expenditure and ensures convenience</p>
+                <button class="rounded-[40px] border border-[#122344] px-6 py-2 md:py-3 shadow-sm">
+                    <p class="text-[#122344] text-xs md:text-sm font-normal font-inter text-center">Learn more</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mx-6 md:mx-12 xl:mx-32 shadow-lg bg-[#fff] px-14 mb-16 md:mb-20 pb-14 md:pb-20 pt-12 lg:pt-4">
+        <p class="text-[#344293] text-2xl md:text-3xl lg:text-4xl font-bold font-dm_sans tracking-[-1px] text-left">Process payments via</p>
+        <div class=" grid grid-cols-12 lg:grid-cols-none lg:flex  justify-between ">
+            <div class="col-span-6 lg:col-span-3 text-center">
+                <img src="Assets/bankcards.png" alt="" class="w-28 h-28 mx-auto md:mx-0 inline-block">
+                <p  class="text-[#063135] text-base md:text-lg lg:text-xl font-bold font-dm_sans tracking-[-0.625px] text-center">Credit/Debit Cards</p>
+            </div>
+            <div class="col-span-6 lg:col-span-3 text-center">
+                <img src="Assets/phone.png" alt="" class="w-28 h-28 mx-auto md:mx-0 inline-block">
+                <p  class="text-[#063135] text-base md:text-lg lg:text-xl font-bold font-dm_sans tracking-[-0.625px] text-center">Mobile Money</p>
+            </div>
+            <div class="col-span-6 lg:col-span-3 text-center">
+                <img src="Assets/bank.png" alt="" class="w-28 h-28 mx-auto md:mx-0 inline-block">
+                <p  class="text-[#063135] text-base md:text-lg lg:text-xl font-bold font-dm_sans tracking-[-0.625px] text-center">Bank Account</p>
+            </div>
+            <div class="col-span-6 lg:col-span-3 text-center ">
+                <img src="Assets/exchange.png" alt="" class="w-28 h-28 mx-auto md:mx-0 inline-block">
+                <p  class="text-[#063135] text-base md:text-lg lg:text-xl font-bold font-dm_sans tracking-[-0.625px] text-center">Bank Transfer</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#3442930F]">
+        <div class="mx-6 md:mx-12 xl:mx-32 py-16  md:py-20">
+            <div class="grid grid-cols-12 md:space-x-8 space-y-4 md:space-y-0">
+                <div class="col-span-12 md:col-span-6 ">
+                    <svg class="bg-[#F89521] h-1 w-16 mb-6 mx-0 block"><rect/> </svg>
+                    <p class="text-[#000] text-2xl md:text-3xl lg:text-4xl font-bold font-inter tracking-[-1px] text-left">Gain control over all financial transactions easily and securely</p>
+                </div>
+                <div class="col-span-12 md:col-span-6">
+                    <p  class="text-[#000]  text-base md:text-lg font-normal font-dm_sans tracking-[-1px] text-left">With Payments you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure. You can keep track of your transactions via a state-of-the-art reporting system.</p>
+                </div>
+            </div>
+            <div class="md:inline-flex gap-8 md:justify-between items-start pt-7 md:pt-12 w-full">
+                <div class="align-top">
+                    <img src="Assets/Receive-Cash.svg" alt="" class="w-20 md:w-28 h-20 md:h-28  mx-0 bg-white border-white rounded-[8px] p-7 z-50">
+                    <div class="align-top pt-4 md:pt-8 space-y-4">
+                        <p  class="text-[#000] text-lg md:text-xl lg:text-2xl font-bold font-inter tracking-[-0.625px] text-left">Complete Payment Transparency</p>
+                        <p class="text-[#979797] text-sm md:text-base font-normal font-inter tracking-[-0.625px] text-left">Payments enables real-time settlements and reconciliations by enabling payments to various parties through virtual accounts.</p>
+                    </div>
+                    
+                </div>
+                <div class="align-top pt-7 md:pt-0">
+                    <img src="Assets/Eye.svg" alt="" class="w-20 md:w-28 h-20 md:h-28 mx-0 bg-white border-white rounded-[8px] p-7 z-50">
+                    <div class="align-top pt-4 md:pt-8  space-y-4">
+                        <p  class="text-[#000] text-lg md:text-xl lg:text-2xl font-bold font-inter tracking-[-0.625px] text-left">Global Visibility & Tighter Controls</p>
+                        <p class="text-[#979797] text-sm md:text-base font-normal font-inter tracking-[-0.625px] text-left">With complete control to track and manage settlements, Payments offers comprehensive reporting and management all in one.</p>
+                    </div>
+                    
+                </div>
+                <div class="align-top pt-7 md:pt-0">
+                    <img src="Assets/Pay-Date.svg" alt="" class="w-20 md:w-28 h-20 md:h-28  mx-0 bg-white border-white rounded-[8px] p-7 z-50">
+                    <div class="align-top pt-4 md:pt-8  space-y-4">
+                        <p  class="text-[#000] text-lg md:text-xl lg:text-2xl font-bold font-inter tracking-[-0.625px] text-left">Actionable Financial Information</p>
+                        <p class="text-[#979797] text-sm md:text-base font-normal font-inter tracking-[-0.625px] text-left">Payments provides data and gives analytics that give insights on trends specific to services or customers.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#3442930F] relative z-0">
+        <div class="mx-6 xl:mx-14 bg-[url('Assets/Art.jpg')] lg:h-[332px] pb-20 md:pb-32 py-12 ">
+            <div class="mx-6 md:mx-8 xl:mx-20 pb-12 mb:pb-0">
+                <p class="text-[#000] text-2xl md:text-3xl lg:text-4xl font-bold font-inter  text-left leading-[107%]">Payments technology enables <br> governments to do more.</p>
+                <p class="text-[#656565] text-sm md:text-base lg:text-lg font-normal font-Inter py-4 text-left">Our teams are available to <br> help, every step of the way.</p>
+                <div class="flex justify-start">
+                <button class=" rounded-[40px] bg-[#0B154F] py-3 px-6 "><p class="text-[#fff] text-xs md:text-sm font-medium font-inter text-center">Talk to us today</p></button>
+                </div>
+            </div>
+            <div class="bg-[#344293] p-8 lg:p-10 lg:absolute left-[60%] 2xl:left-[64%] lg:-mt-[360px] mx-6 lg:mx-0 lg:mr-16 xl:mr-36 ">
+                <p class="text-[#FEFDFA] text-xl md:text-2xl font-bold font-Inter text-left">Let us Start a Conversation with you</p>
+                <p class="text-[#Fff]  md:text-base font-normal font-Inter py-4 pb-1 text-left">Leave us with your email and we will get in touch with you.</p>
+                <textarea type="text" placeholder="Name" class=" border-b border-[#fff] border-dashed text-[#Fff] text-xs font-normal font-Inter w-full bg-transparent  outline-0   whitespace-normal break-words overflow-wrap-break-word align-bottom pt-2 resize-none overflow-hidden"></textarea>
+                <textarea type="text" placeholder="Phone Number" class="border-b border-[#fff] border-dashed text-[#Fff] text-xs font-normal font-Inter w-full bg-transparent  outline-0  whitespace-normal break-words overflow-wrap-break-word align-bottom  pt-2 resize-none overflow-hidden"></textarea>
+                <textarea type="text" placeholder="Email Adress" class="border-b border-[#fff] border-dashed text-[#Fff] text-xs font-normal font-Inter w-full bg-transparent  outline-0  whitespace-normal break-words overflow-wrap-break-word align-bottom  pt-2 resize-none overflow-hidden"></textarea>
+                <textarea type="text" placeholder="Write to us" class="border-b border-[#fff] border-dashed text-[#Fff] text-xs font-normal font-Inter w-full bg-transparent  outline-0  whitespace-normal break-words overflow-wrap-break-word align-bottom   pt-20 resize-none overflow-hidden"></textarea>
+                
+            </div>
+        </div>
+    </div>
+    <div class="  bg-[#0B154F] lg:-mt-12 pb-8">
+        <div class="px-6 md:px-12 xl:px-32 py-14 lg:py-44 2xl:py-32">
+            <div class="">
+                <div class="grid grid-cols-12 ">
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3 pb-2">
+                        <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">Find us at <br> M12 World vision INT <br> Nairobi Kenya</p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4 lg:col-span-3 pb-2 pt-4 md:pt-0">
+                        <div class="pb-2">
+                            <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">Submit your enquiries to </p>
+                             <p class=" text-[#FBB040] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left"  >
+                            <a href="#">info@Payments.com</a></p>
+                        </div>
+                        <div class="col-span-12 md:col-span-4 lg:col-span-3 pb-4  lg:pb-16 pt-4 md:pt-8">
+                            <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">Talk to us on</p>
+                            <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">+254 999 99909</p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-3 pb-2">
+                        <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">Contact our technical <br> support team </p>
+                        <p class=" text-[#FBB040] text-sm sm:text-[15px] font-bold font-dm-sans  leading-6 text-left">
+                        <a href="#">support@Payments.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:pt-8">
+                <div class="">
+                    <div class="md:flex  items-start">
+                        <div class="md:w-[34%] lg:w-[25%] py-4 md:py-0">
+                            <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans leading-6  md:leading-10 text-left">Enquiries </p>
+                            <p class=" text-[#FFF] text-sm sm:text-[15px] font-bold font-dm-sans leading-6  md:leading-10 text-left">
+                            <a href="#">info@Payments.com</a></p>
+                        </div>
+                        <div class="md:w-[20%] ">
+                            <p class=" text-[#Fff] text-sm sm:text-[15px] font-bold font-dm-sans leading-6  md:leading-10 text-left">Contact No.</p>
+                            <p class=" text-[#FFF] text-sm sm:text-[15px] font-bold font-dm-sans leading-6  md:leading-10 text-left">+254 999 99909</p>
+                        </div>
+                        <div class="pt-8 md:pt-0">
+                                <div class="md:flex flex-row inline-flex gap-5 md:right-0 md:absolute md:pr-12  lg:pr-[104px] xl:pr-48">
+                                    <a title="Visit out twitter page" href="" aria-label="Visit our twitter page"> <img
+                                            loading="lazy" src="Assets/twitter.png" alt="Visit our twitter page">
+                                    </a>
+                                    <a title="Send us an email" href="" aria-label="Send us an email"> <img src="Assets/mail.png"
+                                            alt="Send us an email">
+                                    </a>
+                                    <a title="Visit our facebook page" href="" aria-label="Visit our facebook page"> <img
+                                            loading="lazy" src="Assets/facebook.png" alt="Visit our facebook page">
+                                    </a>
+                                    <a title="Visit our instagram page" href="" aria-label="Visit our instagram page"> <img
+                                            loading="lazy" src="Assets/insta.png" alt="Visit our instagram page">
+                                    </a>
+                                    <a title="Visit our linkedin page" href="" aria-label="Visit our linkedin page"> <img
+                                            loading="lazy" src="Assets/linkedin.png" alt="Visit our linkedin page">
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:flex flex-row justify-between items-center  border-t border-[#8A8A8A] mt-5 pt-2 md:pt-0 lg:mr-12 ">
+                <p class=" flex flex-row items-center justify-start gap-2 text-[#FFF] text-2xl color-black font-bold font-inter"> <img src="Assets/logo.png" alt="" class="h-8 w-auto align-middle">Payments</p>
+                <p class="text-sm text-[#979797]  font-semibold font-mulish pt-10 text-left md:text-right">© <span x-data="{date: new Date().getFullYear()}" x-text="date" class="inline-block px-1"> </span>2022@Payments. All Rights Reseved</p>
+        </div>
+
+    </div>
+</body>
+</html>
